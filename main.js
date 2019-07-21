@@ -5,7 +5,7 @@ Create a function called addKeyPowerIndex
 that takes an array of objects as a parameter
 and return this array with add a key to each object
 that is the (index) of this object in this array
-and the value will be the (power 2) of the index
+and the value will be the (power) of the index
 
 var arrOfObj1 = [
   { a: 12 },
@@ -38,11 +38,15 @@ Ex: addKeyPowerIndex(arrOfObj2)
 ]   
 */
 
-function addKeyPowerIndex() {
+function addKeyPowerIndex(arr,i) {
   // WRITE YOUR CODE UNDER THIS LINE  
-
+  var newArr = []
+  arr.forEach(index => {
+    newArr.push(index[i] + index.length ,":"[(index.length **index.length)]) // finde index of the element to return it in new array
+  })
+  return newArr
 }
-
+console.log(addKeyPowerIndex([  { a: 'cat' },{ b: 'dog' },{ c: 'duck' }]))
 
 
 
@@ -57,19 +61,20 @@ and return a new array after will decrease this number
 from each element in this array
 
 var arrOfNum1 = [77,5,33]
-Ex: decreseBy(arrOfnum1,10)
+Ex: decreseBy(arrOfNum1,10)
 => [67,-5,23]
 
 Ex: decreseBy(arrOfNum1,-6)
 => [83, 11, 39]
 */
 
-function decreseBy() {
+function decreseBy(arr) {
   // WRITE YOUR CODE UNDER THIS LINE 
+  var output = arr .map(element => element - 10)
+  return output;
 
 }
-
-
+console.log(decreseBy([77,5,33]))
 
 
 
@@ -81,14 +86,14 @@ that takes an array of objects and number as a parameter
 and return a new array with only the object has a value inside 
 the key name longer than this number
 
-var arrOfObj3 = [
+var arrOfObj4 = [
   { name: "alex" },
   { name: "mercer"},
   { name: "alice" },
   { name: "zaheer"},
   { name: "elizabeth"}
 ]
-Ex: nameLongerThan(arrOfObj3,4)
+Ex: nameLongerThan(arrOfObj4,4)
 =>[
   { name: "mercer"},
   { name: "alice" },
@@ -96,16 +101,22 @@ Ex: nameLongerThan(arrOfObj3,4)
   { name: "elizabeth"}
 ]
 
-Ex: nameLongerThan(arrOfObj3,6)
+Ex: nameLongerThan(arrOfObj4,6)
 =>[
   { name: "elizabeth"}
 ]
 */
 
-function nameLongerThan() {
-  // WRITE YOUR CODE UNDER THIS LINE         
-}
+function nameLongerThan(arr,num) {
+  // WRITE YOUR CODE UNDER THIS LINE    
+  
+  
+var result = arr.filter(arr => arr.length< 6);
+return result;
 
+console.log( nameLongerThan ( ["exuberant", "destruction", "present"]));
+
+}
 
 
 
@@ -133,9 +144,7 @@ Ex: avgLength(arrOfObj4,"food")
 => 6.8
 */
 
-function avgLength() {
-  // WRITE YOUR CODE UNDER THIS LINE         
-
-}
-
-// Good luck :)
+// function avgLength() {
+//   // WRITE YOUR CODE UNDER THIS LINE         
+// // finde the length of string by using index.length then callacalute the avg of it
+// // good luck 
