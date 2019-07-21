@@ -5,7 +5,7 @@ Create a function called addKeyPowerIndex
 that takes an array of objects as a parameter
 and return this array with add a key to each object
 that is the (index) of this object in this array
-and the value will be the (power) of the index
+and the value will be the (power 2) of the index
 
 var arrOfObj1 = [
   { a: 12 },
@@ -81,14 +81,14 @@ that takes an array of objects and number as a parameter
 and return a new array with only the object has a value inside 
 the key name longer than this number
 
-var arrOfObj4 = [
+var arrOfObj3 = [
   { name: "alex" },
   { name: "mercer"},
   { name: "alice" },
   { name: "zaheer"},
   { name: "elizabeth"}
 ]
-Ex: nameLongerThan(arrOfObj4,4)
+Ex: nameLongerThan(arrOfObj3,4)
 =>[
   { name: "mercer"},
   { name: "alice" },
@@ -96,7 +96,7 @@ Ex: nameLongerThan(arrOfObj4,4)
   { name: "elizabeth"}
 ]
 
-Ex: nameLongerThan(arrOfObj4,6)
+Ex: nameLongerThan(arrOfObj3,6)
 =>[
   { name: "elizabeth"}
 ]
